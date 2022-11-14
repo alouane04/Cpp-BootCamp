@@ -1,6 +1,6 @@
-SRC = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
+SRC = main.cpp Replace.cpp
 
-NAME = Brain
+NAME = Replace
 
 CC = c++
 
@@ -8,7 +8,7 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 OBJ = $(SRC:.cpp=.o)
 
-$(NAME): Weapon.hpp HumanA.hpp HumanB.hpp $(OBJ) 
+$(NAME): Replace.hpp $(OBJ) 
 	$(CC) $(CFLAGS) -o $(NAME) $(SRC)
 
 .PHONY: all re clean fclean

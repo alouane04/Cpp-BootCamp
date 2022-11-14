@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   replace.cpp                                        :+:      :+:    :+:   */
+/*   Replace.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ariahi <ariahi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 19:17:22 by ariahi            #+#    #+#             */
-/*   Updated: 2022/11/14 12:53:15 by ariahi           ###   ########.fr       */
+/*   Updated: 2022/11/14 15:49:11 by ariahi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ Replace::~Replace()
 
 int	Replace::replace(std::string s1, std::string s2)
 {
-	std::string		line;
 	std::ifstream	ini_file(this->i_file);
+	std::string		line;
 	size_t			found;
 	
 	if (!ini_file)
@@ -35,21 +35,16 @@ int	Replace::replace(std::string s1, std::string s2)
 		if (!out_file)
 			return (std::cout << "Error opening file" << std::endl, 1);
 		found = line.find(s1);
-		
+		while (found != std::string::npos)
+		{
+			line.erase(found, s1.length());
+			line.insert(found, s2);
+			found = line.find(s1);
+		}
+		out_file << line;
+		out_file.close();
 	}
 	else
 		std::cout << "empty file!" << std::endl;
-	
-
-	if (ini_file && out_file)
-	{
-		while (getline(ini_file, line))
-			out_file << line << std::endl;
-		std::cout << "done" << std::endl;
-	}
-	else
-		std::cout << "cannot read file" << std::endl;
-	ini_file.close();
-	out_file.close();
-	return (0);
+	return (ini_file.close(), 0);
 }
