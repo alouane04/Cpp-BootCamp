@@ -6,7 +6,7 @@
 /*   By: ariahi <ariahi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 18:05:59 by ariahi            #+#    #+#             */
-/*   Updated: 2022/11/15 12:32:22 by ariahi           ###   ########.fr       */
+/*   Updated: 2022/11/15 13:12:56 by ariahi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,8 +57,7 @@ void Harl::complain( std::string level )
 	for (int i = 0; i < 4; i++)
 	{
 		if (!level.compare(messages[i]))
-			 (this->*funcs[i])();
-			 return;
+			 return ((this->*funcs[i])());
 	}
 	std::cout << "inappropriate complain" << std::endl;
 	return ;
