@@ -6,7 +6,7 @@
 /*   By: ariahi <ariahi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 18:05:59 by ariahi            #+#    #+#             */
-/*   Updated: 2022/11/14 19:12:50 by ariahi           ###   ########.fr       */
+/*   Updated: 2022/11/15 11:34:58 by ariahi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,5 @@ void	error( void )
 
 void Harl::complain( std::string level )
 {
-	
+	 
 }
