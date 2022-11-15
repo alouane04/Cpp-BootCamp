@@ -6,13 +6,13 @@
 /*   By: ariahi <ariahi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 18:05:59 by ariahi            #+#    #+#             */
-/*   Updated: 2022/11/15 12:13:09 by ariahi           ###   ########.fr       */
+/*   Updated: 2022/11/15 12:32:22 by ariahi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
 
-Harl::Harl(/* args */)
+Harl::Harl()
 {
 }
 
@@ -20,7 +20,7 @@ Harl::~Harl()
 {
 }
 
-void	debug( void )
+void	Harl::debug( void )
 {
 	std::cout << "I love having extra bacon for my "
 			  << "7XL-double-cheese-triple-pickle-s"
@@ -28,7 +28,7 @@ void	debug( void )
 			  << std::endl;
 }
 
-void	info( void )
+void	Harl::info( void )
 {
 	std::cout << "I cannot believe adding extra bacon "
 			  << "costs more money. You didn't put enough "
@@ -36,7 +36,7 @@ void	info( void )
 			  << std::endl;
 }
 
-void	warning( void )
+void	Harl::warning( void )
 {
 	std::cout << "I think I deserve to have some extra bacon "
 			  << "for free. I've been coming for years whereas "
@@ -44,7 +44,7 @@ void	warning( void )
 			  << std::endl;
 }
 
-void	error( void )
+void	Harl::error( void )
 {
 	std::cout << "This is unacceptable! I want to speak to the manager now."
 			  << std::endl;
@@ -57,7 +57,8 @@ void Harl::complain( std::string level )
 	for (int i = 0; i < 4; i++)
 	{
 		if (!level.compare(messages[i]))
-			return ((this->*funcs[i])());
+			 (this->*funcs[i])();
+			 return;
 	}
 	std::cout << "inappropriate complain" << std::endl;
 	return ;

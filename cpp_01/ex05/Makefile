@@ -1,6 +1,6 @@
 SRC = main.cpp Harl.cpp
 
-NAME = Replace
+NAME = Harl
 
 CC = c++
 
