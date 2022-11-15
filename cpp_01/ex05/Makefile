@@ -1,4 +1,4 @@
-SRC = main.cpp Replace.cpp
+SRC = main.cpp Harl.cpp
 
 NAME = Replace
 
@@ -8,7 +8,7 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 OBJ = $(SRC:.cpp=.o)
 
-$(NAME): Replace.hpp $(OBJ) 
+$(NAME): Harl.hpp $(OBJ) 
 	$(CC) $(CFLAGS) -o $(NAME) $(SRC)
 
 .PHONY: all re clean fclean
