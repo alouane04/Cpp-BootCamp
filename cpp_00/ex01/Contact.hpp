@@ -35,7 +35,7 @@ public:
     std::string Get_NikeName();
     std::string Get_PhoneNumber();
     std::string Get_DarkestSecret();
-	int	Get_Index();
+	int	        Get_Index();
 
     void Set_FirstName(std::string str);
     void Set_LastName(std::string str);

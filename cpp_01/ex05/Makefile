@@ -4,12 +4,15 @@ NAME = Harl
 
 CC = c++
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+FLAGS = -Wall -Wextra -Werror -std=c++98
 
 OBJ = $(SRC:.cpp=.o)
 
 $(NAME): Harl.hpp $(OBJ) 
-	$(CC) $(CFLAGS) -o $(NAME) $(SRC)
+	$(CC) $(FLAGS) -o $(NAME) $(SRC)
+
+%.o : %.cpp 
+	${CC} ${FLAGS} -c $<
 
 .PHONY: all re clean fclean
 

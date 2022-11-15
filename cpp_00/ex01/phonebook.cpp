@@ -63,8 +63,6 @@ int	ft_atoi(std::string str)
 void	PhoneBook::ADD(void)
 {
 	std::string	str[5];
-	//Contact	contact = 
-	//std::cout << std::endl;
 
 	std::cout << "firstName: " << std::endl;
 	getline(std::cin, str[0]);
@@ -115,7 +113,7 @@ static int	get_index(void)
 	std::string	index;
 	int			n;
 
-	std::cout << "enter your wanted index> ";
+	std::cout << "enter your wanted index: " << std::endl;
 	getline(std::cin, index);
 	if (std::cin.eof())
 		std::exit(0);
@@ -141,10 +139,10 @@ void	PhoneBook::SEARCH(void)
 	{
 		if (this->contact[i].Get_FirstName().empty())
 			break ;
-		std::cout << "|" << std::right << std::setw(10) << i + 1
-		<< "|" << std::right << std::setw(10) << str_cut(this->contact[i].Get_FirstName())
-		<< "|" << std::right << std::setw(10) << str_cut(this->contact[i].Get_LastName())
-		<< "|" << std::right << std::setw(10) << str_cut(this->contact[i].Get_NikeName())
+		std::cout << "|"  << std::setw(10) << i + 1
+		<< "|" << std::setw(10) << str_cut(this->contact[i].Get_FirstName())
+		<< "|" << std::setw(10) << str_cut(this->contact[i].Get_LastName())
+		<< "|" << std::setw(10) << str_cut(this->contact[i].Get_NikeName())
 		<< "|" << std::endl;
 	}
 	i = get_index();
