@@ -6,7 +6,7 @@
 /*   By: ariahi <ariahi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 19:17:22 by ariahi            #+#    #+#             */
-/*   Updated: 2022/11/16 13:40:40 by ariahi           ###   ########.fr       */
+/*   Updated: 2022/11/16 20:38:59 by ariahi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,11 @@ int	Replace::replace(std::string s1, std::string s2)
 		if (!out_file)
 			return (std::cout << "Error opening file" << std::endl, 1);
 		found = line.find(s1);
-		if (found != std::string::npos)
+		while (found != std::string::npos)
 		{
 			line.erase(found, s1.length());
 			line.insert(found, s2);
+			found = line.find(s1, ++found);
 		}
 		out_file << line;
 		out_file.close();
