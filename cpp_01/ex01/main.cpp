@@ -6,7 +6,7 @@
 /*   By: ariahi <ariahi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 13:57:00 by ariahi            #+#    #+#             */
-/*   Updated: 2022/11/12 17:48:02 by ariahi           ###   ########.fr       */
+/*   Updated: 2022/11/16 12:13:41 by ariahi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,12 @@
 
 int main(void)
 {
-	Zombie *zombies;
+	Zombie 		*zombies;
+	const int	N = 3;
 
-	zombies = zombieHorde(3, "alouane04");
-	for (int i = 0; i < 3; i++)
+	zombies = zombieHorde(N, "alouane04");
+	for (int i = 0; i < N; i++)
 		zombies[i].announce();
 	delete [] zombies;
+	return (0);
 }

@@ -1,6 +1,6 @@
 SRC = main.cpp Harl.cpp
 
-NAME = Harl
+NAME = harlFiter
 
 CC = c++
 

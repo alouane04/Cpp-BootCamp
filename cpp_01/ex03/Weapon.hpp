@@ -6,7 +6,7 @@
 /*   By: ariahi <ariahi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 18:47:49 by ariahi            #+#    #+#             */
-/*   Updated: 2022/11/13 18:33:15 by ariahi           ###   ########.fr       */
+/*   Updated: 2022/11/16 12:17:40 by ariahi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ public:
 	
 	const std::string&	getType(void);
 	void				setType(const std::string& newtype);
-	
 };
 
 #endif

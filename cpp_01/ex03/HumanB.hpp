@@ -6,7 +6,7 @@
 /*   By: ariahi <ariahi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 11:15:29 by ariahi            #+#    #+#             */
-/*   Updated: 2022/11/13 17:21:53 by ariahi           ###   ########.fr       */
+/*   Updated: 2022/11/16 12:26:00 by ariahi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class HumanB
 {
 private:
 	std::string	name;
-	Weapon*		weapon;
+	Weapon		*weapon;
 public:
 
 	HumanB(std::string Name);
