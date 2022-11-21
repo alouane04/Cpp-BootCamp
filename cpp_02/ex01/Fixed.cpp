@@ -6,7 +6,7 @@
 /*   By: ariahi <ariahi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 09:47:55 by ariahi            #+#    #+#             */
-/*   Updated: 2022/11/21 16:06:13 by ariahi           ###   ########.fr       */
+/*   Updated: 2022/11/21 16:58:34 by ariahi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ Fixed::Fixed(void) : n(0)
 Fixed::Fixed(const Fixed &f)
 {
 	std::cout << "copy constructor called" << std::endl;
-	this->setRawBits(f.getRawBits());
+	//this->setRawBits(f.getRawBits());
+	*this = f;
 }
 
 Fixed::Fixed(const int i)
@@ -49,7 +50,7 @@ Fixed::~Fixed(void)
 
 int	Fixed::getRawBits( void ) const
 {
-	std::cout << "getRawBits member function called" << std::endl;
+	//std::cout << "getRawBits member function called" << std::endl;
 	return (this->n);
 }
 
