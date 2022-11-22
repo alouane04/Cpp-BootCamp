@@ -6,7 +6,7 @@
 /*   By: ariahi <ariahi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 09:47:55 by ariahi            #+#    #+#             */
-/*   Updated: 2022/11/21 16:58:34 by ariahi           ###   ########.fr       */
+/*   Updated: 2022/11/22 08:58:00 by ariahi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ int		Fixed::toInt(void) const
 	return (this->n >> this->bits);
 }
 
-std::ostream & operator<<(std::ostream & o,const Fixed&  obj)
+std::ostream & operator<<(std::ostream & o, const Fixed& obj)
 {
 	o << obj.toFloat();
 	return (o);

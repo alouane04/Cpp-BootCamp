@@ -6,7 +6,7 @@
 /*   By: ariahi <ariahi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 09:46:21 by ariahi            #+#    #+#             */
-/*   Updated: 2022/11/21 16:06:06 by ariahi           ###   ########.fr       */
+/*   Updated: 2022/11/22 08:57:54 by ariahi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,6 @@ public:
 	int		toInt(void) const;
 };
 
-std::ostream & operator<<(std::ostream & o,const Fixed& obj);
+std::ostream & operator<<(std::ostream & o, const Fixed& obj);
 
 #endif
