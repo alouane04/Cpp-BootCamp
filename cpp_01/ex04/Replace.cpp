@@ -6,7 +6,7 @@
 /*   By: ariahi <ariahi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 19:17:22 by ariahi            #+#    #+#             */
-/*   Updated: 2022/11/16 20:38:59 by ariahi           ###   ########.fr       */
+/*   Updated: 2022/11/23 18:37:05 by ariahi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,15 @@ int	Replace::replace(std::string s1, std::string s2)
 	size_t			found;
 
 	if (!ini_file)
-		return (std::cout << "Error opening file" << std::endl, 1);
+		return (std::cerr << "Error opening file" << std::endl, 1);
 	if (getline(ini_file, line, '\0'))
 	{
 		std::ofstream out_file(this->o_file);
 		if (!out_file)
-			return (std::cout << "Error opening file" << std::endl, 1);
+			return (std::cerr << "Error opening file" << std::endl, 1);
 		found = line.find(s1);
+		if (!found)
+			return (std::cerr << "invalid arg" << std::endl, 1);
 		while (found != std::string::npos)
 		{
 			line.erase(found, s1.length());
