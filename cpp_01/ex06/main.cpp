@@ -6,19 +6,18 @@
 /*   By: ariahi <ariahi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 18:06:08 by ariahi            #+#    #+#             */
-/*   Updated: 2022/11/15 12:25:33 by ariahi           ###   ########.fr       */
+/*   Updated: 2022/11/24 10:31:45 by ariahi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
 
-int main(void)
+int main(int ac, char **av)
 {
-	std::string	level;
 	Harl		harl;
 
-	std::cout << "entre the appropriate complain" << std::endl;
-	std::cin >> level;
-	harl.complain(level);
+	if (ac != 2)
+		return (std::cerr << "invalid arg" << std::endl, 1);
+	harl.complain(av[1]);
 	return (0);
 }
