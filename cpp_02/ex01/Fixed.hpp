@@ -6,7 +6,7 @@
 /*   By: ariahi <ariahi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 09:46:21 by ariahi            #+#    #+#             */
-/*   Updated: 2022/11/22 08:57:54 by ariahi           ###   ########.fr       */
+/*   Updated: 2022/11/24 17:32:05 by ariahi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,12 @@ private:
 	static const int	bits = 8;
 public:
 	Fixed(void);
-	Fixed(const Fixed &f);
+	Fixed(const Fixed &other);
 	Fixed(const int i);
 	Fixed(const float num);
-	Fixed& operator=(const Fixed &other);
 	~Fixed(void);
+
+	Fixed& operator=(const Fixed &other);
 
 	void	setRawBits( int const num );
 	int		getRawBits( void ) const;
