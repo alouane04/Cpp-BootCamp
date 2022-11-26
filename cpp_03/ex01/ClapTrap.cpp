@@ -6,7 +6,7 @@
 /*   By: ariahi <ariahi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 09:30:45 by ariahi            #+#    #+#             */
-/*   Updated: 2022/11/26 17:20:18 by ariahi           ###   ########.fr       */
+/*   Updated: 2022/11/26 18:18:36 by ariahi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,9 +58,9 @@ void	ClapTrap::takeDamage(unsigned int amount)
 		std::cout << "ClapTrap " << Name << "game over" << std::endl;
 		return ;
 	}
-	std::cout << "ClapTrap " << this->Name << " takeDamage " << amount
-			  << " , causing "
-			  << this->AttackDamage << " points of damage!" << std::endl;
+	std::cout << "ClapTrap " << this->Name << " take " << amount
+			  << " damage" << std::endl;
+	HitPoint -= amount;
 }
 
 void	ClapTrap::beRepaired(unsigned int amount)
@@ -70,7 +70,8 @@ void	ClapTrap::beRepaired(unsigned int amount)
 		std::cout << "ClapTrap " << Name << "game over" << std::endl;
 		return ;
 	}
-	std::cout << "ClapTrap " << this->Name << " beRepaired " << amount
-			  << " , causing "
-			  << this->AttackDamage << " points of damage!" << std::endl;
+	std::cout << "ClapTrap " << this->Name << " repaired for "
+			  << amount << " hit point" << std::endl;
+	EnergyPoint--;
+	HitPoint += amount;
 }
