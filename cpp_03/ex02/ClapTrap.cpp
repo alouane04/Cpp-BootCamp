@@ -6,7 +6,7 @@
 /*   By: ariahi <ariahi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 09:30:45 by ariahi            #+#    #+#             */
-/*   Updated: 2022/11/26 21:42:25 by ariahi           ###   ########.fr       */
+/*   Updated: 2022/11/26 18:18:36 by ariahi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void	ClapTrap::attack(const std::string& target)
 {
 	if (EnergyPoint <= 0)
 	{	
-		std::cout << "ClapTrap " << Name << " have no energypoint" << std::endl;
+		std::cout << "ClapTrap " << Name << "have no energypoint" << std::endl;
 		return ;
 	}
 	std::cout << "ClapTrap " << this->Name << " attacks " << target
@@ -55,7 +55,7 @@ void	ClapTrap::takeDamage(unsigned int amount)
 {
 	if (EnergyPoint <= amount)
 	{	
-		std::cout << "ClapTrap " << Name << " game over" << std::endl;
+		std::cout << "ClapTrap " << Name << "game over" << std::endl;
 		return ;
 	}
 	std::cout << "ClapTrap " << this->Name << " take " << amount
@@ -67,7 +67,7 @@ void	ClapTrap::beRepaired(unsigned int amount)
 {
 	if (EnergyPoint <= amount)
 	{	
-		std::cout << "ClapTrap " << Name << " game over" << std::endl;
+		std::cout << "ClapTrap " << Name << "game over" << std::endl;
 		return ;
 	}
 	std::cout << "ClapTrap " << this->Name << " repaired for "
