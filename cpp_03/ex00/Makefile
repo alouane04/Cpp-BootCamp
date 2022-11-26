@@ -1,6 +1,6 @@
-SRC = main.cpp Fixed.cpp
+SRC = main.cpp ClapTrap.cpp
 
-NAME = fixed
+NAME = claptrap
 
 CC = c++
 
@@ -8,7 +8,7 @@ FLAGS = -Wall -Wextra -Werror -std=c++98
 
 OBJ = $(SRC:.cpp=.o)
 
-$(NAME): Fixed.hpp $(OBJ) 
+$(NAME): ClapTrap.hpp $(OBJ) 
 	$(CC) $(FLAGS) -o $(NAME) $(SRC)
 
 %.o : %.cpp 
