@@ -6,7 +6,7 @@
 /*   By: ariahi <ariahi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 18:30:27 by ariahi            #+#    #+#             */
-/*   Updated: 2022/11/26 22:01:01 by ariahi           ###   ########.fr       */
+/*   Updated: 2022/11/27 18:29:22 by ariahi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,13 @@
 
 class FragTrap : public ClapTrap
 {
-private:
-	FragTrap();
 public:
 	FragTrap(std::string name);
+	FragTrap(const FragTrap &other);
+	FragTrap();
 	~FragTrap();
+
+	FragTrap & operator=(const FragTrap& other);
 
 	void	highFivesGuys(void);
 };
