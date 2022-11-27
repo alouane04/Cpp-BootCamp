@@ -4,7 +4,7 @@ NAME = diamondtrap
 
 CC = c++
 
-FLAGS = -Wall -Wextra -Werror -std=c++98
+FLAGS = -Wall -Wextra -Werror -std=c++98 -Wshadow -Wno-shadow
 
 OBJ = $(SRC:.cpp=.o)
 

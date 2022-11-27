@@ -6,7 +6,7 @@
 /*   By: ariahi <ariahi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 09:30:05 by ariahi            #+#    #+#             */
-/*   Updated: 2022/11/26 22:13:07 by ariahi           ###   ########.fr       */
+/*   Updated: 2022/11/27 12:48:00 by ariahi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ protected:
 	unsigned int	HitPoint;
 	unsigned int	EnergyPoint;
 	unsigned int	AttackDamage;
-	ClapTrap();
 public:
 	ClapTrap(std::string name);
 	ClapTrap(const ClapTrap& other);
+	ClapTrap();
 	~ClapTrap();
 
 	ClapTrap&	operator=(const ClapTrap& other);

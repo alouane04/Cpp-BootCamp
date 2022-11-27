@@ -6,7 +6,7 @@
 /*   By: ariahi <ariahi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 09:30:45 by ariahi            #+#    #+#             */
-/*   Updated: 2022/11/26 18:18:36 by ariahi           ###   ########.fr       */
+/*   Updated: 2022/11/27 12:00:56 by ariahi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ ClapTrap::~ClapTrap()
 
 ClapTrap::ClapTrap(const ClapTrap& other)
 {
-	std::cout << "Copy " << this->Name << " Destructor called" << std::endl;
+	std::cout << "Copy ClapTrap Costructor called" << std::endl;
 	*this = other;
 }
 

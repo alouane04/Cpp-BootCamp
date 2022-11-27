@@ -6,7 +6,7 @@
 /*   By: ariahi <ariahi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 22:09:03 by ariahi            #+#    #+#             */
-/*   Updated: 2022/11/26 23:44:04 by ariahi           ###   ########.fr       */
+/*   Updated: 2022/11/27 11:48:20 by ariahi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,9 @@ public:
 	DiamondTrap(std::string name);
 	~DiamondTrap();
 
-	using	ScavTrap::attack;
 	void	whoAmI();
+	//using	ScavTrap::attack;
+	void	attack(const std::string &target);
 };
 
 #endif
