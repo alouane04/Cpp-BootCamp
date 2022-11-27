@@ -6,7 +6,7 @@
 /*   By: ariahi <ariahi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 16:26:01 by ariahi            #+#    #+#             */
-/*   Updated: 2022/11/27 17:54:31 by ariahi           ###   ########.fr       */
+/*   Updated: 2022/11/27 18:39:04 by ariahi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ ScavTrap::ScavTrap()
 
 ScavTrap::ScavTrap(const ScavTrap& other)
 {
-	std::cout << "Copy ScavTrap Destructor called" << std::endl;
+	std::cout << "ScavTrap copy Destructor called" << std::endl;
 	*this = other;
 }
 
