@@ -6,7 +6,7 @@
 /*   By: ariahi <ariahi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 08:53:32 by ariahi            #+#    #+#             */
-/*   Updated: 2022/11/29 18:58:34 by ariahi           ###   ########.fr       */
+/*   Updated: 2022/11/29 21:53:36 by ariahi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,13 @@ int main()
 	const WrongAnimal* wrong_meta = new WrongAnimal();
 	const WrongAnimal* wrong_i = new WrongCat();
 
+	std::cout << wrong_i->getType() << std::endl;
+
 	wrong_i->makeSound();
 	wrong_meta->makeSound();
 
 	delete	wrong_meta;
 	delete	wrong_i;
+
 	return 0;
 }
