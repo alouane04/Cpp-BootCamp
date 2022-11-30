@@ -6,7 +6,7 @@
 /*   By: ariahi <ariahi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 09:04:40 by ariahi            #+#    #+#             */
-/*   Updated: 2022/11/30 10:17:18 by ariahi           ###   ########.fr       */
+/*   Updated: 2022/11/30 15:26:21 by ariahi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ Cat::Cat()
 Cat::Cat(const Cat& other)
 {
 	std::cout << "Cat copy constructor called" << std::endl;
+	this->brain = NULL;
 	*this = other;
 }
 
@@ -36,6 +37,7 @@ Cat&	Cat::operator=(const Cat& other)
 	std::cout << "Cat copy assignment constructor called" << std::endl;
 	if (this != &other)
 	{
+		delete this->brain;
 		this->type = other.getType();
 		this->brain = new Brain(*other.brain);
 	}
