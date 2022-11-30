@@ -6,7 +6,7 @@
 /*   By: ariahi <ariahi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 09:04:01 by ariahi            #+#    #+#             */
-/*   Updated: 2022/11/30 11:15:57 by ariahi           ###   ########.fr       */
+/*   Updated: 2022/11/30 14:55:53 by ariahi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ Dog::~Dog()
 
 Dog&	Dog::operator=(const Dog& other)
 {
-	std::cout << "Dog copy assignment constructor calledf" << std::endl;
+	std::cout << "Dog copy assignment constructor called" << std::endl;
 	if (this != &other)
 	{
 		this->type = other.getType();
