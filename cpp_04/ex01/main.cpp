@@ -6,7 +6,7 @@
 /*   By: ariahi <ariahi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 08:53:32 by ariahi            #+#    #+#             */
-/*   Updated: 2022/11/30 11:16:21 by ariahi           ###   ########.fr       */
+/*   Updated: 2022/11/30 11:18:57 by ariahi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,11 @@ int main()
 	{
 		Dog tmp = test;
 	}
+
 	const	Animal* animals[4] = {new Cat(), new Cat(), new Dog(), new Dog()};
+
 	for (int i = 0; i < 4; i++)
 		delete animals[i];
+
 	return 0;
 }
