@@ -1,30 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongCat.hpp                                       :+:      :+:    :+:   */
+/*   Bureaucrat.CPP                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ariahi <ariahi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/29 10:51:25 by ariahi            #+#    #+#             */
-/*   Updated: 2022/11/29 18:27:39 by ariahi           ###   ########.fr       */
+/*   Created: 2022/12/01 11:05:03 by ariahi            #+#    #+#             */
+/*   Updated: 2022/12/01 11:56:23 by ariahi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGCAT_HPP
-#define	WRONGCAT_HPP
+#include "Bureaucrat.hpp"
 
-#include "WrongAnimal.hpp"
-
-class WrongCat : public WrongAnimal
+Bureaucrat::Bureaucrat(/* args */)
 {
-public:
-	WrongCat();
-	WrongCat(const WrongCat& other);
-	~WrongCat();
+}
 
-	WrongCat&	operator=(const WrongCat& other);
+Bureaucrat::Bureaucrat(const Bureaucrat& other)
+{
+	*this = other;
+}
+
+Bureaucrat::~Bureaucrat()
+{
+}
+
+Bureaucrat&	Bureaucrat::operator=(const Bureaucrat& other)
+{
 	
-	void	makeSound() const;
-};
+}
 
-#endif
+const std::string	Bureaucrat::getName() const
+{
+	return (this->name);
+}
+
+int	Bureaucrat::getGrade() const
+{
+	return (this->grade);
+}

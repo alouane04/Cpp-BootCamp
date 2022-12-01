@@ -1,30 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongCat.hpp                                       :+:      :+:    :+:   */
+/*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ariahi <ariahi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/29 10:51:25 by ariahi            #+#    #+#             */
-/*   Updated: 2022/11/29 18:27:39 by ariahi           ###   ########.fr       */
+/*   Created: 2022/12/01 11:03:15 by ariahi            #+#    #+#             */
+/*   Updated: 2022/12/01 11:56:32 by ariahi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGCAT_HPP
-#define	WRONGCAT_HPP
+#ifndef BUREAUCRAT_HPP
+#define BUREAUCRAT_HPP
 
-#include "WrongAnimal.hpp"
+#include "iostream"
 
-class WrongCat : public WrongAnimal
+class Bureaucrat
 {
+private:
+	const std::string	name;
+	int					grade;
 public:
-	WrongCat();
-	WrongCat(const WrongCat& other);
-	~WrongCat();
+	Bureaucrat(/* args */);
+	Bureaucrat(const Bureaucrat& other);
+	~Bureaucrat();
 
-	WrongCat&	operator=(const WrongCat& other);
-	
-	void	makeSound() const;
+	Bureaucrat& operator=(const Bureaucrat& other);
+
+	const std::string	getName() const;
+	int	getGrade() const;
 };
 
 #endif
