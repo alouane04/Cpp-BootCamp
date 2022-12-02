@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Bureaucrat.CPP                                     :+:      :+:    :+:   */
+/*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ariahi <ariahi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 11:05:03 by ariahi            #+#    #+#             */
-/*   Updated: 2022/12/01 23:18:19 by ariahi           ###   ########.fr       */
+/*   Updated: 2022/12/02 11:41:56 by ariahi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,8 +64,22 @@ void	Bureaucrat::decrementGrade()
 		throw GradeTooLowException();
 }
 
+void	Bureaucrat::signForm(Form& form)
+{
+	try
+	{
+		form.beSigned(*this);
+		std::cout << this->getName() << " signed " << form.getName() << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cout << this->getName() << " couldn't sign " << form.getName()
+		 		  << " because " << e.what() << std::endl;
+	}
+}
+
 std::ostream& operator<<(std::ostream& out, const Bureaucrat& other)
 {
-	out << other.getName() << ", Bureaucrat grade " << other.getGrade();
+	out << other.getName() << ", bureaucrat grade " << other.getGrade();
 	return (out);
 }
