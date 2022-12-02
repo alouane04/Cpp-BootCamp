@@ -1,6 +1,6 @@
-SRC = main.cpp Bureaucrat.cpp
+SRC = main.cpp Bureaucrat.cpp Form.cpp
 
-NAME = bureaucrat
+NAME = form
 
 CC = c++
 
@@ -8,7 +8,7 @@ FLAGS = -Wall -Wextra -Werror -std=c++98
 
 OBJ = $(SRC:.cpp=.o)
 
-$(NAME): Bureaucrat.hpp $(OBJ) 
+$(NAME): Bureaucrat.hpp Form.hpp $(OBJ) 
 	$(CC) $(FLAGS) -o $(NAME) $(SRC)
 
 %.o : %.cpp 
