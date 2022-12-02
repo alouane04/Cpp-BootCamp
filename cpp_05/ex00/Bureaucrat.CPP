@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Bureaucrat.CPP                                     :+:      :+:    :+:   */
+/*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ariahi <ariahi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 11:05:03 by ariahi            #+#    #+#             */
-/*   Updated: 2022/12/01 23:18:19 by ariahi           ###   ########.fr       */
+/*   Updated: 2022/12/02 08:49:20 by ariahi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,6 @@ void	Bureaucrat::decrementGrade()
 
 std::ostream& operator<<(std::ostream& out, const Bureaucrat& other)
 {
-	out << other.getName() << ", Bureaucrat grade " << other.getGrade();
+	out << other.getName() << ", bureaucrat grade " << other.getGrade();
 	return (out);
 }
