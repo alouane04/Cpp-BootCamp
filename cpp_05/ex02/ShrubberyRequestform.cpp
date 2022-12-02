@@ -6,7 +6,7 @@
 /*   By: ariahi <ariahi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 21:52:25 by ariahi            #+#    #+#             */
-/*   Updated: 2022/12/02 22:31:38 by ariahi           ###   ########.fr       */
+/*   Updated: 2022/12/03 00:05:45 by ariahi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,6 @@ void	ShrubberyRequestForm::execute(const Bureaucrat& executer) const
 {
 	if (this->getSigned() == false)
 		throw Form::NotSignedException();
-	else if (executer.getGrade() > this->get)
+	else if (executer.getGrade() > this->getExeGrade())
+		throw Form::GradeTooLowException();
 }

@@ -6,7 +6,7 @@
 /*   By: ariahi <ariahi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 23:31:02 by ariahi            #+#    #+#             */
-/*   Updated: 2022/12/02 21:07:35 by ariahi           ###   ########.fr       */
+/*   Updated: 2022/12/03 00:07:36 by ariahi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,12 @@ public:
 	{
 	public:
 		virtual const char * what() const throw() { return "Grade too Low";}
+	};
+
+	class NotSignedException : public std::exception
+	{
+	public:
+		virtual const char * what() const throw() { return "Form not signed";}
 	};
 
 	const std::string	getName() const;
