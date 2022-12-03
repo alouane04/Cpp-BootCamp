@@ -6,7 +6,7 @@
 /*   By: ariahi <ariahi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 21:34:48 by ariahi            #+#    #+#             */
-/*   Updated: 2022/12/03 23:02:16 by ariahi           ###   ########.fr       */
+/*   Updated: 2022/12/04 00:13:43 by ariahi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,23 +40,15 @@ Form*	Intern::makeForm(std::string name, std::string target)
 
 	std::string	names[] = {"shrubbery creation", "robotomy request", "president pardon"};
 
+	Form*		forms[] = {new ShrubberyCreationForm(target),
+						   new RobotomyRequestForm(target),
+						   new PresidentialPardonForm(target)};
+
 	while (++i < 3)
 		if (!name.compare(names[i]))
-			break;
+			return (forms[i]);
 
-	switch (i)
-	{
-		case 0:
-			std::cout << "Intern creates " << name << std::endl;
-			return (new ShrubberyCreationForm(target));
-		case 1:
-			std::cout << "Intern creates " << name << std::endl;
-			return (new RobotomyRequestForm(target));
-		case 2:
-			std::cout << "Intern creates " << name << std::endl;
-			return (new PresidentialPardonForm(target));
-		default:
-			std::cout << "Intern get confuse about form " << name << std::endl;
-	}
+	std::cout << "Intern get confuse about form " << name << std::endl;
+
 	return (nullptr);			
 }
