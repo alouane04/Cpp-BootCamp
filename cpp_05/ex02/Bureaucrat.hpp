@@ -6,7 +6,7 @@
 /*   By: ariahi <ariahi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 11:03:15 by ariahi            #+#    #+#             */
-/*   Updated: 2022/12/02 13:00:41 by ariahi           ###   ########.fr       */
+/*   Updated: 2022/12/03 14:18:09 by ariahi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,8 @@ public:
 	void				decrementGrade();
 
 	void				signForm(Form& form);
+	
+	void				executeForm(const Form& form) const;
 };
 
 std::ostream& operator<<(std::ostream& out, const Bureaucrat& other);
