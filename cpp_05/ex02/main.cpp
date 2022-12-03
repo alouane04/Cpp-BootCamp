@@ -6,7 +6,7 @@
 /*   By: ariahi <ariahi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 23:17:29 by ariahi            #+#    #+#             */
-/*   Updated: 2022/12/03 20:36:05 by ariahi           ###   ########.fr       */
+/*   Updated: 2022/12/03 23:07:49 by ariahi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,12 @@ int main()
 		RobotomyRequestForm		robotomy("Robotomy");
 		PresidentialPardonForm	president("President");
 		//Form		form("another_alouane04", 4);
-		std::cout << "ali" << std::endl;
+		std::cout << "---------------" << std::endl;
 		
 		bureaucrat.signForm(shrubbery);
 		bureaucrat.executeForm(shrubbery);
 		
-		std::cout << "ali" << std::endl;
+		std::cout << "---------------" << std::endl;
 		
 		bureaucrat.signForm(robotomy);
 		bureaucrat.executeForm(robotomy);
@@ -38,7 +38,7 @@ int main()
 		bureaucrat.executeForm(robotomy);
 		bureaucrat.executeForm(robotomy);
 		
-		std::cout << "ali" << std::endl;
+		std::cout << "---------------" << std::endl;
 
 		bureaucrat.signForm(president);
 		bureaucrat.executeForm(president);
