@@ -6,7 +6,7 @@
 /*   By: ariahi <ariahi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 23:31:02 by ariahi            #+#    #+#             */
-/*   Updated: 2022/12/03 00:07:36 by ariahi           ###   ########.fr       */
+/*   Updated: 2022/12/03 16:04:45 by ariahi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,8 @@ public:
 	bool				getSigned() const;
 
 	void				beSigned(const Bureaucrat& bureaucrat);
+	
+	virtual void	execute( const Bureaucrat& executer) const = 0;
 };
 
 std::ostream&	operator<<(std::ostream& out, const Form& other);
