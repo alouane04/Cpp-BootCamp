@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ShrubberyRequestForm.hpp                           :+:      :+:    :+:   */
+/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ariahi <ariahi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 21:50:20 by ariahi            #+#    #+#             */
-/*   Updated: 2022/12/03 00:04:22 by ariahi           ###   ########.fr       */
+/*   Updated: 2022/12/03 15:54:10 by ariahi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SHRUBBERYREQUESTFORM_HPP
-#define SHRUBBERYREQUESTFORM_HPP
+#ifndef SHRUBBERYCREATIONFORM_HPP
+#define SHRUBBERYCREATIONFORM_HPP
 
 #include "Form.hpp"
 #include <fstream>
 
-class ShrubberyRequestForm : public Form
+class ShrubberyCreationForm : public Form
 {
 private:
 	const std::string	target;
 public:
-	ShrubberyRequestForm();
-	ShrubberyRequestForm(const std::string& Target);
-	ShrubberyRequestForm(const ShrubberyRequestForm& other);
-	~ShrubberyRequestForm();
+	ShrubberyCreationForm();
+	ShrubberyCreationForm(const std::string& Target);
+	ShrubberyCreationForm(const ShrubberyCreationForm& other);
+	~ShrubberyCreationForm();
 
-	ShrubberyRequestForm&	operator=(const ShrubberyRequestForm& other);
+	ShrubberyCreationForm&	operator=(const ShrubberyCreationForm& other);
 
 	void	execute(const Bureaucrat& executer) const;
 };
