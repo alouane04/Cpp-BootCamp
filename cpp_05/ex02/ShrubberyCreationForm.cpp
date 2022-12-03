@@ -12,11 +12,11 @@
 
 #include "ShrubberyCreationForm.hpp"
 
-ShrubberyCreationForm::ShrubberyCreationForm() : Form("shrubberyform", 145, 137) target("")
+ShrubberyCreationForm::ShrubberyCreationForm() : Form("shrubberyform", 145, 137), target("")
 {
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(const std::string& Target) : target(Target), Form("shrubberyform", 145, 137)
+ShrubberyCreationForm::ShrubberyCreationForm(const std::string& Target) : Form("shrubberyform", 145, 137), target(Target)
 {	
 }
 
@@ -59,5 +59,6 @@ void	ShrubberyCreationForm::execute(const Bureaucrat& executer) const
 		outfile << "            .     \"      000      \"    .     ." << std::endl;
 		outfile << "       .         .   .   000     .        .       ." << std::endl;
 		outfile << ".. .. ..................O000O........................ ......" << std::endl;
+
 	outfile.close();
 }
