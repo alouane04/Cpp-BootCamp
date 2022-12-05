@@ -1,6 +1,6 @@
-SRC = main.cpp Cast.cpp
+SRC = main.cpp
 
-NAME = bureaucrat
+NAME = data
 
 CC = c++
 
@@ -8,7 +8,7 @@ FLAGS = -Wall -Wextra -Werror -std=c++98
 
 OBJ = $(SRC:.cpp=.o)
 
-$(NAME): Cast.hpp $(OBJ) 
+$(NAME): Data.hpp $(OBJ) 
 	$(CC) $(FLAGS) -o $(NAME) $(SRC)
 
 %.o : %.cpp 
