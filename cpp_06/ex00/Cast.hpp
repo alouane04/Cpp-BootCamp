@@ -6,20 +6,20 @@
 /*   By: ariahi <ariahi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 17:00:31 by ariahi            #+#    #+#             */
-/*   Updated: 2022/12/05 12:23:56 by ariahi           ###   ########.fr       */
+/*   Updated: 2022/12/05 12:25:39 by ariahi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CAST_HPP
 #define CAST_HPP
 
-// #include "iostream"
-// #include "iomanip"
-// #include "limits"
+#include "iostream"
+#include "iomanip"
+#include "limits"
 
-#include <iostream>
-#include <fstream>
-#include <limits>
+// #include <iostream>
+// #include <fstream>
+// #include <limits>
 
 class Cast
 {
