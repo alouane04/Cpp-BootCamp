@@ -6,7 +6,7 @@
 /*   By: ariahi <ariahi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 17:01:17 by ariahi            #+#    #+#             */
-/*   Updated: 2022/12/05 12:21:24 by ariahi           ###   ########.fr       */
+/*   Updated: 2022/12/05 12:37:25 by ariahi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ bool	Cast::isFloat() const
 	if (s[0] == '-' || s[0] == '+')
 		n++;
 
-	for (int i = n; i < s.length() - 1; i++)
+	for (int i = n; i < (int) s.length() - 1; i++)
 	{
 		if (s[i] == '.')
 			f++;
@@ -103,7 +103,7 @@ bool	Cast::isDouble() const
 	int f = 0;
 	if (s[0] == '-' || s[0] == '+')
 		n++;
-	for (int i = n; i < s.length(); i++)
+	for (int i = n; i < (int) s.length(); i++)
 	{
 		if (s[i] == '.')
 			f++;
@@ -115,7 +115,7 @@ bool	Cast::isDouble() const
 
 void	Cast::castInt()
 {
-	std::cout << "Casting int" << std::endl;
+	//std::cout << "Casting int" << std::endl;
 	n = std::stoi(s);
 	f = static_cast<float>(n);
 	d = static_cast<double>(n);
@@ -124,7 +124,7 @@ void	Cast::castInt()
 
 void	Cast::castChar()
 {
-	std::cout << "Casting char" << std::endl;
+	//std::cout << "Casting char" << std::endl;
 	c = s[0];
 	n = c;
 	f = static_cast<float>(n);
@@ -133,7 +133,7 @@ void	Cast::castChar()
 
 void	Cast::castFloat()
 {
-	std::cout << "Casting float" << std::endl;
+	//std::cout << "Casting float" << std::endl;
 	f = std::stof(s);
 	n = static_cast<int>(f);
 	d = static_cast<double>(f);
@@ -142,7 +142,7 @@ void	Cast::castFloat()
 
 void	Cast::castDouble()
 {
-	std::cout << "Casting double" << std::endl;
+	//std::cout << "Casting double" << std::endl;
 	d = std::stod(s);
 	n = static_cast<int>(d);
 	f = static_cast<float>(d);
@@ -159,15 +159,15 @@ void	Cast::print()
 	if (c < 0)
 		std::cout << "Impossible" << std::endl;
 	else if (!isprint(c))
-		std::cout << "Is not printable" << std::endl;
+		std::cout << "Non displayable" << std::endl;
 	else
 		std::cout << c << std::endl;
 	
 	/////////////////Int/////////////////////
 
 	std::cout << "int: ";
-	if ((b || s.length() >= 10 && s.compare("2147483647") > 0)
-		|| (b || s.length() >= 11 && s.compare("-2147483647") > 0))
+	if (((b || (int) s.length() >= 10) && (s.compare("2147483647") > 0))
+	|| ((b || (int) s.length() >= 11) && (s.compare("-2147483647") > 0)))
 		std::cout << "impossible" << std::endl;
 	else if (n >= std::numeric_limits<int>::min() && n <= std::numeric_limits<int>::max())
 		std::cout << n << std::endl;
@@ -212,7 +212,7 @@ void	Cast::check()
 		castChar();
 	else if (isFloat())
 		castFloat();
-	else if (isDouble)
+	else if (isDouble())
 		castDouble();
 	else if (isLimit()){}
 	else
