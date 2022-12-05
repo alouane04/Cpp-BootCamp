@@ -6,7 +6,7 @@
 /*   By: ariahi <ariahi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 17:01:17 by ariahi            #+#    #+#             */
-/*   Updated: 2022/12/04 19:46:33 by ariahi           ###   ########.fr       */
+/*   Updated: 2022/12/05 12:21:24 by ariahi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,18 @@ Cast::Cast()
 	this->c = 0;
 	this->f = 0.0f;
 	this->d = 0.0;
+	this->b = false;
 	this->s = "";
+}
+
+Cast::Cast(std::string s)
+{
+	this->n = 0;
+	this->c = 0;
+	this->f = 0.0f;
+	this->d = 0.0;
+	this->b = false;
+	this->s = s;
 }
 
 Cast::Cast(const Cast& other)
@@ -35,6 +46,7 @@ Cast&	Cast::operator=(const Cast& other)
 	this->n = other.n;
 	this->f = other.f;
 	this->d = other.d;
+	this->b = other.b;
 	this->s = other.s;
 	
 	return (*this);
@@ -49,7 +61,7 @@ bool	Cast::isChar() const
 
 bool	Cast::isInt() const
 {
-	for (int i = 0; i < s.length(); i++)
+	for (int i = 0; i < (int)s.length(); i++)
 	{
 		if (i == 0 && (s[i] == '-' || s[i] == '+'))
 			continue;
@@ -137,6 +149,61 @@ void	Cast::castDouble()
 	c = n;
 }
 
+void	Cast::print()
+{
+	std::cout << std::fixed << std::setprecision(1);
+
+	////////////////Char////////////////////
+
+	std::cout << "char: ";
+	if (c < 0)
+		std::cout << "Impossible" << std::endl;
+	else if (!isprint(c))
+		std::cout << "Is not printable" << std::endl;
+	else
+		std::cout << c << std::endl;
+	
+	/////////////////Int/////////////////////
+
+	std::cout << "int: ";
+	if ((b || s.length() >= 10 && s.compare("2147483647") > 0)
+		|| (b || s.length() >= 11 && s.compare("-2147483647") > 0))
+		std::cout << "impossible" << std::endl;
+	else if (n >= std::numeric_limits<int>::min() && n <= std::numeric_limits<int>::max())
+		std::cout << n << std::endl;
+
+	/////Float////////////Double//////////
+
+	std::cout << "float: " << f << 'f' << std::endl;
+	std::cout << "double: " << d << std::endl;
+}
+
+bool	Cast::isLimit()
+{
+	if (!s.compare("-inf") || !s.compare("-inff"))
+	{
+		f = std::numeric_limits<float>::infinity();
+		f = -1 * f;
+		d = std::numeric_limits<double>::infinity();
+		d = -1 * d;
+		return (b = true, b);
+	}
+	else if (!s.compare("+inf") || !s.compare("+inff"))
+	{
+		f = std::numeric_limits<float>::infinity();
+		d = std::numeric_limits<double>::infinity();
+		return (b = true, b);
+	}
+	if (!s.compare("nan") || !s.compare("nanf"))
+	{
+		n = std::numeric_limits<int>::quiet_NaN();
+		d = std::numeric_limits<double>::quiet_NaN();
+		f = std::numeric_limits<float>::quiet_NaN();
+		return (b = true, b);
+	}
+	return (b);
+}
+
 void	Cast::check()
 {
 	if (isInt())
@@ -147,4 +214,8 @@ void	Cast::check()
 		castFloat();
 	else if (isDouble)
 		castDouble();
+	else if (isLimit()){}
+	else
+		throw Cast::UnknownType();
+	print();
 }
