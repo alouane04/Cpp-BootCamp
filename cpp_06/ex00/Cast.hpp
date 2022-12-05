@@ -6,14 +6,20 @@
 /*   By: ariahi <ariahi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 17:00:31 by ariahi            #+#    #+#             */
-/*   Updated: 2022/12/04 19:39:53 by ariahi           ###   ########.fr       */
+/*   Updated: 2022/12/05 12:23:56 by ariahi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CAST_HPP
 #define CAST_HPP
 
-#include "iostream"
+// #include "iostream"
+// #include "iomanip"
+// #include "limits"
+
+#include <iostream>
+#include <fstream>
+#include <limits>
 
 class Cast
 {
@@ -22,6 +28,7 @@ private:
 	char		c;
 	float		f;
 	double		d;
+	bool		b;
 	std::string	s;
 public:
 	Cast();
@@ -61,7 +68,9 @@ public:
 
 	//////////////////////
 
-	
+	void	print();
+
+	bool	isLimit();
 };
 
 #endif
