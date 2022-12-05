@@ -1,14 +1,14 @@
-SRC = main.cpp Base.cpp
+SRC = main.cpp
 
 NAME = base
 
-CC = g++
+CC = c++
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
 OBJ = $(SRC:.cpp=.o)
 
-$(NAME): Base.hpp $(OBJ) 
+$(NAME): $(OBJ) 
 	$(CC) $(FLAGS) -o $(NAME) $(SRC)
 
 %.o : %.cpp 
