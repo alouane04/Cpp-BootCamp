@@ -6,7 +6,7 @@
 /*   By: ariahi <ariahi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 16:58:02 by ariahi            #+#    #+#             */
-/*   Updated: 2022/12/05 21:26:19 by ariahi           ###   ########.fr       */
+/*   Updated: 2022/12/07 11:50:39 by ariahi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,13 @@ Base*	generate(void)
 
 void	identify(Base* p)
 {
+	/////////////////A///////////////////
 	if (dynamic_cast<A*>(p))
 		std::cout << "A" << std::endl;
+	/////////////////B////////////////////
 	else if (dynamic_cast<B*>(p))
 		std::cout << "B" << std::endl;
+	/////////////////C////////////////////
 	else if (dynamic_cast<C*>(p))
 		std::cout << "C" << std::endl;
 	else
@@ -55,26 +58,24 @@ void	identify(Base& p)
 		A	&a = dynamic_cast<A&>(p);
 		std::cout << "A" << std::endl;
 		(void)a;}
-	catch(const std::exception& e){
-		std::cout << e.what() << std::endl;}
+	catch(const std::exception& e){}
 	/////////////////B////////////////////
 	try{
 		B	&b = dynamic_cast<B&>(p);
 		std::cout << "B" << std::endl;
 		(void)b;}
-	catch(const std::exception& e){
-		std::cout << e.what() << std::endl;}
+	catch(const std::exception& e){}
 	/////////////////C////////////////////
 	try{
 		C	&c = dynamic_cast<C&>(p);
 		std::cout << "C" << std::endl;
 		(void)c;}
-	catch(const std::exception& e){
-		std::cout << e.what() << std::endl;}
+	catch(const std::exception& e){}
 }
 
 int main()
 {
+	std::srand(std::time(0));
 	Base*	a = generate();
 	Base*	b = generate();
 	Base*	c = generate();
@@ -99,7 +100,7 @@ int main()
 	identify(*b);
 
 	std::cout << "c = ";
-	identify(*b);
+	identify(*c);
 	
 	return (delete a, delete b, delete c, 0);
 }
