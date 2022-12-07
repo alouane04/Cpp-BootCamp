@@ -6,7 +6,7 @@
 /*   By: ariahi <ariahi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 13:58:10 by ariahi            #+#    #+#             */
-/*   Updated: 2022/12/05 16:53:41 by ariahi           ###   ########.fr       */
+/*   Updated: 2022/12/07 12:37:03 by ariahi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ int main()
 	
 	std::cout << "original: " << ptr << std::endl;
 	std::cout << "copy: " << newptr << std::endl;
+	std::cout << newptr->data << std::endl;
 	// std::cout << "copy2: " << raw << std::endl;
 
 	return (0);
