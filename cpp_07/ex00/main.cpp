@@ -6,36 +6,11 @@
 /*   By: ariahi <ariahi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 15:36:31 by ariahi            #+#    #+#             */
-/*   Updated: 2022/12/07 19:04:08 by ariahi           ###   ########.fr       */
+/*   Updated: 2022/12/08 14:10:53 by ariahi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "whatever.hpp"
-
-template <typename T> void	swap(T a, T b)
-{
-	T	tmp;
-
-	tmp = a;
-	a = b;
-	b = tmp;
-}
-
-template <typename T> T		min(T a, T b)
-{
-	if (a < b)
-		return (a);
-	else
-		return (b);
-}
-
-template <typename T> T		max(T a, T b)
-{
-	if (a > b)
-		return (a);
-	else
-		return (b);
-}
 
 int main( void )
 {
