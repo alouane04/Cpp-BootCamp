@@ -6,7 +6,7 @@
 /*   By: ariahi <ariahi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 15:59:28 by ariahi            #+#    #+#             */
-/*   Updated: 2022/12/08 21:29:18 by ariahi           ###   ########.fr       */
+/*   Updated: 2022/12/09 09:15:51 by ariahi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,10 @@ int main()
 	std::cout << charArray;
 
 	std::cout << charArray[0] << std::endl;
+
+    charArray[0] = 'z';
+
+    std::cout << charArray[0] << std::endl;
 
 	//std::cout << charArray[5]; will trow exeption out_of_range
 }

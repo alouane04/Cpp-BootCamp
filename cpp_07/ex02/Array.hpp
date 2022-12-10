@@ -6,7 +6,7 @@
 /*   By: ariahi <ariahi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 15:59:52 by ariahi            #+#    #+#             */
-/*   Updated: 2022/12/08 21:23:35 by ariahi           ###   ########.fr       */
+/*   Updated: 2022/12/09 09:15:45 by ariahi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ public:
 	
 	Array&	operator=(const Array& other)
 	{
-		if (this != other)
+		if (this != &other)
 		{
 			delete this->array;
 			this->array = new T[other.size()];

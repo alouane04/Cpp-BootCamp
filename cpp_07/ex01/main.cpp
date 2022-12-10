@@ -6,7 +6,7 @@
 /*   By: ariahi <ariahi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 14:12:29 by ariahi            #+#    #+#             */
-/*   Updated: 2022/12/08 19:14:50 by ariahi           ###   ########.fr       */
+/*   Updated: 2022/12/09 09:02:52 by ariahi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,25 @@ int main()
 
 	return (0);
 }
+
+// class Awsome{
+
+// public:
+//     Awsome(void): _n(42) {return;}
+//     int get(void)const {return this->_n;}
+// private:
+//     int _n;
+// };
+
+// std::ostream &operator<<(std::ostream &o, Awsome const &rhs) {o<<rhs.get(); return o;}
+
+// template <typename T>
+// void print(T const &x){std::cout << x << std::endl; return;}
+
+// int main(){
+//     int tab[] = {0,1,2,3,4};
+//     Awsome tab2[5];
+
+//     iter(tab, 5, print);
+//     iter(tab2, 5, print);
+// }
