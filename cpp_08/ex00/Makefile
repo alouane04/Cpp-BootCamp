@@ -8,7 +8,7 @@ FLAGS = -Wall -Wextra -Werror -std=c++98
 
 OBJ = $(SRC:.cpp=.o)
 
-$(NAME): iter.hpp $(OBJ) 
+$(NAME): easyfind.hpp $(OBJ) 
 	$(CC) $(FLAGS) -o $(NAME) $(SRC)
 
 %.o : %.cpp 
