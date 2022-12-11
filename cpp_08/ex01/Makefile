@@ -1,6 +1,6 @@
-SRC = main.cpp
+SRC = main.cpp Span.cpp
 
-NAME = iter
+NAME = span
 
 CC = c++
 
@@ -8,7 +8,7 @@ FLAGS = -Wall -Wextra -Werror -std=c++98
 
 OBJ = $(SRC:.cpp=.o)
 
-$(NAME): easyfind.hpp $(OBJ) 
+$(NAME): Span.hpp $(OBJ) 
 	$(CC) $(FLAGS) -o $(NAME) $(SRC)
 
 %.o : %.cpp 
