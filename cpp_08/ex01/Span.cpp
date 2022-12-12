@@ -6,7 +6,7 @@
 /*   By: ariahi <ariahi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/10 22:38:14 by ariahi            #+#    #+#             */
-/*   Updated: 2022/12/11 18:54:42 by ariahi           ###   ########.fr       */
+/*   Updated: 2022/12/12 15:56:50 by ariahi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ Span&	Span::operator=(const Span& other)
 
 void	Span::addNumber(const int n)
 {
-	if (N < vec.size())
+	if (N <= vec.size())
 		throw std::out_of_range ("reach the limit");
 	vec.push_back(n);
 }
