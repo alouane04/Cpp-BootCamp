@@ -6,7 +6,7 @@
 /*   By: ariahi <ariahi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 16:20:53 by ariahi            #+#    #+#             */
-/*   Updated: 2022/12/12 22:04:59 by ariahi           ###   ########.fr       */
+/*   Updated: 2022/12/12 22:25:52 by ariahi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,6 @@ int main()
 		
 		++it;
 		--it;
-		
-		// std::cout << "test" << std::endl;
-		// std::cout << *++it << std::endl;
-		// std::cout << *ite << std::endl;
-		// std::cout << "test" << std::endl;
 		
 		while (it != ite)
 		{
@@ -77,12 +72,7 @@ int main()
 		
 		++it;
 		--it;
-		
-		// std::cout << "test" << std::endl;
-		// std::cout << *++it << std::endl;
-		// std::cout << *ite << std::endl;
-		// std::cout << "test" << std::endl;
-		
+
 		while (it != ite)
 		{
 			std::cout << *it << std::endl;
