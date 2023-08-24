@@ -11,11 +11,39 @@
 	For further information about 42cursus and its projects, please refer to <a href="https://github.com/alouane04/cpp/blob/master/README.md"><b>42cursus repo</b></a>.
 </p>
 
+
+# C++ - Module 00
+Namespaces, classes, member functions, stdio streams, initialization lists, static, const, and some other basic stuff.
+
+# C++ - Module 01
+Memory allocation, pointers to members, references, switch statement
+
+# C++ - Module 02
+Ad-hoc polymorphism, operator overloading and Orthodox Canonical class form.
+
+# C++ - Module 03
+Inheritance
+
+# C++ - Module 04
+Subtype polymorphism, abstract classes, interfaces
+
+# C++ - Module 05
+Repetition and Exceptions
+
+# C++ - Module 06
+C++ casts
+
+# C++ - Module 07
+C++ templates
+
+# C++ - Module 08
+Templated containers, iterators, algorithms
+
 ## Usage/Examples
 
 ```javascript
-git clone https://github.com/alouane04/cpp.git
-cd cpp
+git clone https://github.com/alouane04/Cpp-BootCamp.git
+cd Cpp-BootCamp
 Enjoy
 ```
 
