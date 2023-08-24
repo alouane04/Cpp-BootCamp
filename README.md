@@ -8,7 +8,7 @@
 
 <p align="center">
 	<b><i>Development repo for 42cursus' CPP-Modules project</i></b><br>
-	For further information about 42cursus and its projects, please refer to <a href="https://github.com/alouane04/cpp/README.md"><b>42cursus repo</b></a>.
+	For further information about 42cursus and its projects, please refer to <a href="https://github.com/alouane04/cpp/blob/master/README.md"><b>42cursus repo</b></a>.
 </p>
 
 ## Usage/Examples
